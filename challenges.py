@@ -1,3 +1,5 @@
+# ------------------------------------------------------------------
+
 """
 patient_name = "John Smith"
 age= 50
@@ -211,4 +213,115 @@ for number in numbers:
 print(unique_numbers)
 
 '''
+#--------------------------------------
+'''      Tuple:   Similar to list but cannot be modified   '''
 
+'''
+
+secret_numbers = (323,555,5454)
+# secret_numbers[0] = 776  can't be modified
+print(secret_numbers)
+
+'''
+
+#--------------------------------------
+'''Dictionaries:  just like objects in JS'''
+
+'''
+customer = {
+    "name": "zia",
+    "age":  24,
+    "is_logged_in": False
+}
+
+print(customer["name"], customer["is_logged_in"])
+print(customer.get("name"))
+
+'''
+
+#--------------------------------------
+'''      Numbers to words OR Number mapper   '''
+
+'''
+
+number = input("Enter a number: ")
+number_mapping = {
+    "1":"one",
+    "2":"two",
+    "3":"three",
+    "4":"four",
+    "5":"five",
+}
+output = ""
+for letter in number:
+    output += number_mapping.get(letter, "!") + " "
+print(output)
+'''
+
+#----------------------------------------------
+'''         Text to emojis       '''
+
+'''
+
+message = input(">")
+words = message.split(' ')
+emojis = {
+    ":)": "😄",
+    ":(": "😔"
+}
+output = ""
+for word in words:
+    output += emojis.get(word, word) + " "
+print(output)
+
+'''
+
+# ------------------------------------------------------------------
+'''   Functions  '''
+
+'''
+
+def greet_customer(first_name, last_name):
+    print(f'Hi {first_name} {last_name} welcome to our website')
+
+
+greet_customer("Subhan", "Raheem")
+greet_customer("Ali", "Amin")
+
+'''
+# ------------------------------------------------------------------
+'''     Text to emoji using function   '''
+'''
+
+def text_to_emoji(message):
+    words = message.split(' ')
+    emojis = {
+        ":)": "😄",
+        ":(": "😔"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return(output)
+
+text = input(">")
+text_to_emoji(text)
+print(text_to_emoji(text))
+'''
+
+# ------------------------------------------------------------------
+'''Exception handling'''
+'''
+
+try:
+    age = int(input('Age:'))
+    print(age)
+    salary = 234383
+    risk = salary/age
+    print(age)
+except ZeroDivisionError:
+    print('Age cannot be zero')
+except ValueError:
+    print('Invalid value')
+
+'''
