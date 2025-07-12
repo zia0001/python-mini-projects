@@ -325,3 +325,176 @@ except ValueError:
     print('Invalid value')
 
 '''
+
+# ------------------------------------------------------------------
+'''    Classes  '''
+
+
+'''
+
+class Animals:
+    def cat(self):
+        print("Hi! I am cat from lions family")
+    def dog(self):
+        print("Hi! I am Dog and i like playing")
+
+
+
+a = Animals()
+a.dog()
+
+
+cclass Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+p1 = Person("Jack")
+p2 = Person("Ali")
+Sarah = Person("Sarah")
+
+print(p1.name)
+print(p2.name)
+p1.talk()
+p2.talk()
+Sarah.talk()
+
+'''
+
+#--------------------------------------------------------------
+'''      Inheritance    '''
+
+'''
+
+class Birds:
+    def fly(self):
+        print("fly")
+
+class Duck(Birds):
+    def swim(self):
+        print("swim")
+
+
+class turkey(Birds):
+    pass
+
+
+duck1 = Duck()
+duck1.fly()
+duck1.swim()
+'''
+#-------------------------------------------------
+'''        Modules          '''
+
+'''
+import converters
+from converters import kg_to_lbs
+from converters import lbs_to_kg
+
+kg_to_lbs(67)
+lbs_to_kg(166)
+
+def lbs_to_kg(weight):
+    weight_in_kg = weight * 0.453592
+    print(weight_in_kg)
+    return weight_in_kg
+
+
+
+def kg_to_lbs(weight):
+    weight_in_lbs = weight / 0.453592
+    print(weight_in_lbs)
+    return weight_in_lbs
+
+'''
+
+'''
+def find_max_in_list(numbers):
+    maximum = numbers[0]
+    for number in numbers:
+        if number > maximum:
+            max = number
+    print(maximum)
+    
+import number_tools
+from number_tool import find_max_in_list
+numbers = [34,87,54,8,43]
+find_max_in_list(numbers)
+
+'''
+
+'''    Builtin radom module      Random member selection'''
+'''
+import random
+
+members = ['hameed', 'salar','wasim']
+selected_member = random.choice(members)
+print(selected_member)
+
+'''
+
+'''Random dice rolling'''
+'''
+import random
+from calendar import firstweekday
+
+
+class Dice:
+    def roll(self):
+        first = random.randint(1,6)
+        second = random.randint(1, 6)
+        return (first, second)
+
+
+dice = Dice()
+dice.roll()
+print(dice.roll())
+'''
+#----------------------------------------------------------------
+'''    Packages   '''
+
+'''
+def cal_shipping():
+    print('shipping cost')
+
+from ecommerce.shipping import cal_shipping
+cal_shipping()
+'''
+
+#-------------------------------------------------------------------
+'''Files and Directories using pathlib'''
+
+'''
+from pathlib import Path
+
+path = Path()
+for file in path.glob('*.py'):
+    print(file)
+'''
+
+'''
+from pathlib import Path
+
+path = Path("emails")
+print(path.mkdir())
+
+'''
+
+'''
+from pathlib import Path
+
+path = Path("emails")
+print(path.rmdir())
+'''
+
+'''
+
+from pathlib import Path
+
+path = Path("number_tools.py")
+print(path.exists())
+
+'''
